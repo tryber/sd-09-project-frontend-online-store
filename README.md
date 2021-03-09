@@ -1,10 +1,4 @@
 ### Termos de acordos
-Projeto Frontend Online Store
-Grupo 27
-- Maximilian Kaden
-- Jean Silveira
-- Enio Nicael
-- João Henrique
 
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe
 
