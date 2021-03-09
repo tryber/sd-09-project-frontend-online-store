@@ -18,3 +18,10 @@ export async function getProductsFromQuery(query) {
   const productsJson = productsPromisse.json();
   return productsJson;
 }
+
+export async function listProductsInCategory(category) {
+  const endpoint = `https://api.mercadolibre.com/sites/MLB/search?category=${category}`;
+  const productsPromisse = await fetch(endpoint);
+  const productsJson = productsPromisse.json();
+  return productsJson;
+}
