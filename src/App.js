@@ -1,11 +1,14 @@
 import React from 'react';
-import './App.css';
+import Pageinitial from './Pageinitial';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        Inicio do projeto
+        <Pageinitial />
+        <p data-testid="home-initial-message">
+          Digite algum termo de pesquisa ou escolha uma categoria.
+        </p>
       </div>
     );
   }
