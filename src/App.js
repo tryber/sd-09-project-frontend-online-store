@@ -1,18 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Search from './Pages/Search';
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Search from './Search';
+import Carrinho from './Carrinho';
 
-class App extends React.Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={ Search } />
-        </Switch>
-      </BrowserRouter>
-    );
-  }
+function App() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={ Search } />
+        <Route exact path="/carrinho" component={ Carrinho } />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;
