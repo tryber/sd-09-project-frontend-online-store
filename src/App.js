@@ -5,7 +5,6 @@ import Carrinho from './components/Carrinho';
 
 function App() {
   return (
-<<<<<<< HEAD
     <div className="App">
       <header className="App-header">
         <img src={ logo } className="App-logo" alt="logo" />
@@ -19,15 +18,6 @@ function App() {
           Learn React
         </a>
       </header>
-=======
-    <div>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={ Home } />
-          <Route exact path="/components/carrinho" component={ Carrinho } />
-        </Switch>
-      </BrowserRouter>
->>>>>>> 6187febd8fede7f7aadb62673cf6522d296f488f
     </div>
   );
 }
