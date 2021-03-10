@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import * as Api from '../services/api';
-
 
 class ProductList extends Component {
   constructor(props) {
@@ -31,7 +29,6 @@ class ProductList extends Component {
       <main>
         <nav>
           <input type="text" />
-          <Link data-testid="shopping-cart-button" to="/cart">Carrinho</Link>
         </nav>
         <aside>
           <span>Categorias:</span>
