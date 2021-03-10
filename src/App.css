@@ -45,3 +45,11 @@
 .left-side {
   left: 0;
 }
+
+ul {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}

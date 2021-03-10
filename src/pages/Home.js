@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ProductCard from '../Components/ProductCard';
+import ProductCard from '../components/ProductCard/ProductCard';
 import * as api from '../services/api';
 import Categories from '../components/Categories';
 
@@ -27,6 +27,7 @@ export default class Home extends Component {
     const response = await api.getProductsFromCategoryAndQuery('', text);
     const list = await response.results;
     this.setState({ productList: list });
+    console.log(this.state.productList);
   }
 
   render() {
@@ -52,10 +53,12 @@ export default class Home extends Component {
         <p data-testid="home-initial-message">
           Digite algum termo de pesquisa ou escolha uma categoria.
         </p>
-        {productList
-          .map((product) => (
-            <ProductCard product={ product } key={ product.id } />
-          ))}
+        <ul>
+          {productList
+            .map((product) => (
+              <ProductCard product={ product } key={ product.id } />
+            ))}
+        </ul>
       </div>
     );
   }
