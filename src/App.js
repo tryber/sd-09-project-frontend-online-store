@@ -5,14 +5,14 @@ import Carrinho from './components/Carrinho';
 
 function App() {
   return (
-    <div>
+    <main>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route exact path="/components/carrinho" component={ Carrinho } />
         </Switch>
       </BrowserRouter>
-    </div>
+    </main>
   );
 }
 
