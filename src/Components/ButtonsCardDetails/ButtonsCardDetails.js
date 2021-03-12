@@ -24,11 +24,12 @@ class ButtonsCardDetails extends Component {
   render() {
     const { quantity } = this.state;
     return (
-      <div className="changeQuantityConainer">
+      <div className="changeQuantityConainer changQuant">
         <button
           onClick={ () => this.decreaseQuantity(quantity) }
           data-testid="product-decrease-quantity"
           type="button"
+          className="minusPlus"
         >
           -
         </button>
@@ -37,6 +38,7 @@ class ButtonsCardDetails extends Component {
           onClick={ () => this.increaseQuantity(quantity) }
           data-testid="product-increase-quantity"
           type="button"
+          className="minusPlus"
         >
           +
         </button>

@@ -82,7 +82,7 @@ class ProductCard extends Component {
 }
 
 ProductCard.propTypes = {
-  product: PropTypes.objectOf().isRequired,
+  product: PropTypes.shape().isRequired,
   text: PropTypes.string.isRequired,
 };
 
