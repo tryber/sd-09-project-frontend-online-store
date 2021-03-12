@@ -1,24 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ProductList from './components/ProductList';
 import './App.css';
+import Cart from './components/Cart';
+import * as api from './services/api';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={ logo } className="App-logo" alt="logo" />
-        <p>Edit src/App.js and save to reload.</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      categories: [],
+    };
+  }
+
+  async componentDidMount() {
+    await api.getCategories()
+      .then((response) => this.setState({
+        categories: response,
+      }));
+  }
+
+  render() {
+    const { categories, products } = this.state;
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={ () => (
+              <ProductList
+                categories={ categories }
+                searchedProducts={ products }
+                handleChange={ this.handleChange }
+              />
+            ) }
+          />
+          <Route path="/cart" component={ Cart } />
+        </Switch>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
