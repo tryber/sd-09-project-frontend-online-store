@@ -7,7 +7,7 @@ class Comprar extends Componet {
       <button
         type='button'
         data-testid='product-add-to-cart'
-        onClick={ () =>  productToCart(id, title, price)}>
+        onClick={ () => productToCart(id, title, price)} >
         Comprar
       </button>
     )
