@@ -5,7 +5,7 @@ class CarrinhoVazio extends Component {
     return (
       <div className='footer'>
           <p data-testid='shopping-cart-empty-message'>
-            Seu carrinho está vazio!
+            Seu carrinho está vazio
           </p>
       </div>
     )
