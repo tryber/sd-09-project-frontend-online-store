@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { TiArrowBackOutline, TiShoppingCart } from 'react-icons/ti';
+import Header from '../Components/Header/Header';
 import * as api from '../services/api';
 import Loading from '../Components/Loading/Loading';
 import Cart from '../services/Data';
@@ -13,27 +14,33 @@ export default class ProductDetails extends Component {
   constructor(state) {
     super(state);
     this.addCartItem = this.addCartItem.bind(this);
+    this.sumQuant = this.sumQuant.bind(this);
     this.state = {
       product: {},
       loading: true,
+      totalQuant: 0,
     };
   }
 
   async componentDidMount() {
-    console.log(this.props);
-    const { match } = this.props;
+    const { match, location: { search } } = this.props;
     const { category, id } = match.params;
-    const { location } = this.props;
-    const { search } = location;
     const query = search.slice(1);
     const product = await api.getProductsFromCategoryAndQuery(category, query);
+    // localStorage.removeItem('quant');
     const selectedProduct = product.results
       .find((value) => value.id === id);
     this.addProductOnState(selectedProduct);
+    this.sumQuant();
   }
 
   addProductOnState(selectedProduct) {
     this.setState({ product: selectedProduct, loading: false });
+  }
+
+  sumQuant() {
+    const counter = localStorage.getItem('quant');
+    this.setState({ totalQuant: counter });
   }
 
   addCartItem(product) {
@@ -57,11 +64,12 @@ export default class ProductDetails extends Component {
   }
 
   render() {
-    const { product, loading } = this.state;
+    const { product, loading, totalQuant } = this.state;
     const { title, price } = product;
     if (loading) return <Loading />;
     return (
       <div>
+        <Header totalQuant={ totalQuant } />
         <div className="headerLinks">
           <Link to="/" className="linkShoppingCart">
             <div><TiArrowBackOutline /></div>
@@ -72,6 +80,7 @@ export default class ProductDetails extends Component {
             data-testid="shopping-cart-button"
           >
             <div><TiShoppingCart /></div>
+            <div data-testid="shopping-cart-size">{ totalQuant }</div>
           </Link>
         </div>
         <div data-testid="product-detail-name">

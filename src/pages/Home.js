@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import Header from '../Components/Header/Header';
 import ProductCard from '../Components/ProductCard/ProductCard';
-import * as api from '../services/api';
 import Categories from '../Components/Categories/Categories';
 import Loading from '../Components/Loading/Loading';
+import Cart from '../services/Data';
+import * as api from '../services/api';
 
 export default class Home extends Component {
   constructor(state) {
@@ -11,11 +12,13 @@ export default class Home extends Component {
 
     this.setSearchText = this.setSearchText.bind(this);
     this.handleCategory = this.handleCategory.bind(this);
+    this.sumCartQuant = this.sumCartQuant.bind(this);
 
     this.state = {
       searchText: '',
       productList: [],
       loading: false,
+      totalQuant: 0,
     };
   }
 
@@ -34,29 +37,26 @@ export default class Home extends Component {
     this.setState({ searchText: target.value });
   }
 
+  sumCartQuant() {
+    this.setState({ totalQuant: 0 });
+    Cart.forEach(({ quantity }) => {
+      this.setState((prevState) => ({
+        totalQuant: prevState.totalQuant + quantity,
+      }));
+    });
+    const { totalQuant } = this.state;
+    localStorage.setItem('quant', totalQuant);
+  }
+
   render() {
-    const { productList, loading, searchText } = this.state;
+    const { productList, loading, searchText, totalQuant } = this.state;
     return (
       <div className="App">
-        <input
-          id="searchInput"
-          type="text"
-          data-testid="query-input"
-          onChange={ this.setSearchText }
+        <Header
+          totalQuant={ totalQuant }
+          setSearchText={ this.setSearchText }
+          handleCategory={ this.handleCategory }
         />
-        <button type="button" onClick={ this.handleCategory } data-testid="query-button">
-          Pesquisar
-        </button>
-        <button type="button">
-          <Link to="/ShoppingCart" data-testid="shopping-cart-button">
-            Carrinho de Compras
-          </Link>
-        </button>
-        <button type="button">
-          <Link to="/Checkout" data-testid="checkout-products">
-            checkout
-          </Link>
-        </button>
         <div className="left-side">
           <Categories handleCategory={ this.handleCategory } />
         </div>
@@ -67,7 +67,12 @@ export default class Home extends Component {
           { (loading) ? <Loading /> : null }
           {productList
             .map((product) => (
-              <ProductCard key={ product.id } product={ product } text={ searchText } />
+              <ProductCard
+                key={ product.id }
+                product={ product }
+                text={ searchText }
+                sumCartQuant={ this.sumCartQuant }
+              />
             ))}
         </ul>
       </div>
