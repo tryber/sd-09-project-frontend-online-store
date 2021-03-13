@@ -34,7 +34,6 @@ export default class ProductDetails extends Component {
     let counter = 0;
     Cart.forEach((value) => { counter += value.quantity; });
     this.setState({ quantDetail: counter });
-
   }
 
   addProductOnState(selectedProduct) {
@@ -88,7 +87,6 @@ export default class ProductDetails extends Component {
           </Link>
         </div>
         <div data-testid="product-detail-name" className="productContainer">
-          <PictureCardDetail pictures={ pictures } title={ title } />
           <div className="titleDetails">
             { title }
             { price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }
