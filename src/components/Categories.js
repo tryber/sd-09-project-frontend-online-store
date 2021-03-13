@@ -1,5 +1,6 @@
 import React from 'react';
 import { getCategories } from '../services/api';
+import InputCategory from './InputCategory';
 
 class Categories extends React.Component {
   constructor(props) {
@@ -27,11 +28,18 @@ class Categories extends React.Component {
     const { promisse, categories } = this.state;
     if (promisse === true) {
       return (
-        <ol>
+        <section className="categories-list">
+          <h4 className="categories-list-title">Categorias:</h4>
           { categories
             .map((category) => (
-              <li key={ category.id } data-testid="category">{ category.name }</li>)) }
-        </ol>
+              <InputCategory
+                key={ category.id }
+                id="category"
+                labelText={ category.name }
+                value={ category.id }
+              />
+            )) }
+        </section>
       );
     }
     return <ol />;
