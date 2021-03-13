@@ -2,34 +2,45 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { TiArrowBackOutline, TiShoppingCart } from 'react-icons/ti';
-import * as api from '../services/api';
-import Loading from '../Components/Loading/Loading';
+// import * as api from '../services/api';
+// import Loading from '../Components/Loading/Loading';
 import Cart from '../services/Data';
 import './ProductDetails.css';
 import ButtonsCardDetails from '../Components/ButtonsCardDetails/ButtonsCardDetails';
 import AvaliationForm from '../Components/AvaliationForm/AvaliationForm';
+import CounterCard from '../Components/CounterCart/CounterCard';
 
 export default class ProductDetails extends Component {
   constructor(state) {
     super(state);
     this.addCartItem = this.addCartItem.bind(this);
+    this.counterCart = this.counterCart.bind(this);
     this.state = {
       product: {},
       loading: true,
+      quantDetail: 0,
     };
   }
 
   async componentDidMount() {
-    console.log(this.props);
     const { match } = this.props;
-    const { category, id } = match.params;
-    const { location } = this.props;
-    const { search } = location;
-    const query = search.slice(1);
-    const product = await api.getProductsFromCategoryAndQuery(category, query);
-    const selectedProduct = product.results
-      .find((value) => value.id === id);
-    this.addProductOnState(selectedProduct);
+    const { id } = match.params;
+    const resp = await fetch(`https://api.mercadolibre.com/items?ids=${id}`);
+    const result = await resp.json();
+    // const { location } = this.props;
+    // const { search } = location;
+    // const query = search.slice(1);
+    // const product = await api.getProductsFromCategoryAndQuery(category, query);
+    // const selectedProduct = product.results
+    //   .find((value) => value.id === id);
+    this.counterCart();
+    this.addProductOnState(result[0].body);
+  }
+
+  counterCart() {
+    let counter = 0;
+    Cart.forEach((value) => { counter += value.quantity; });
+    this.setState({ quantDetail: counter });
   }
 
   addProductOnState(selectedProduct) {
@@ -38,28 +49,32 @@ export default class ProductDetails extends Component {
 
   addCartItem(product) {
     const check = Cart.some((value) => value.title === product.title);
+    const add = document.querySelector('.numberToAdd');
+    const addNumber = parseInt(add.value, 10);
     if (check) {
       Cart.forEach((cartItem) => {
         if (cartItem.title === product.title) {
-          cartItem.quantity += 1;
+          cartItem.quantity += addNumber;
         }
       });
     } else {
-      const add = document.querySelector('.numberToAdd');
       const { title, thumbnail, price } = product;
       Cart.push({
         title,
         thumbnail,
         price,
-        quantity: add.value,
+        quantity: addNumber,
       });
     }
+    let counter = 0;
+    Cart.forEach((value) => { counter += value.quantity; });
+    this.setState({ quantDetail: counter });
   }
 
   render() {
-    const { product, loading } = this.state;
+    const { product, loading, quantDetail } = this.state;
     const { title, price } = product;
-    if (loading) return <Loading />;
+    if (loading) return (<CounterCard total={ 4 } />);
     return (
       <div>
         <div className="headerLinks">
@@ -72,6 +87,7 @@ export default class ProductDetails extends Component {
             data-testid="shopping-cart-button"
           >
             <div><TiShoppingCart /></div>
+            <CounterCard total={ quantDetail } />
           </Link>
         </div>
         <div data-testid="product-detail-name">
@@ -106,11 +122,6 @@ ProductDetails.propTypes = {
     params: PropTypes.objectOf({
       id: PropTypes.string.isRequired,
       category: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-  location: PropTypes.objectOf({
-    params: PropTypes.objectOf({
-      search: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };

@@ -30,6 +30,8 @@ class ProductCard extends Component {
         availableQuantity,
       });
     }
+    const { counterCard } = this.props;
+    counterCard();
   }
 
   render() {
@@ -66,6 +68,7 @@ class ProductCard extends Component {
 ProductCard.propTypes = {
   product: PropTypes.objectOf().isRequired,
   text: PropTypes.string.isRequired,
+  counterCard: PropTypes.func.isRequired,
 };
 
 export default ProductCard;
