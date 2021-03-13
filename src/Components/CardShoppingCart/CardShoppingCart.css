@@ -1,0 +1,12 @@
+.ulShoppingCart {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardShoppingCartContainer {
+  display: flex;
+}
+
+.cardShoppingCartContainer img {
+  width: 100px;
+}

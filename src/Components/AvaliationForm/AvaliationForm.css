@@ -1,0 +1,15 @@
+.avaliationFormContainer {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.avaliationFormContainer textarea {
+  display: block;
+  margin: 1rem 0;
+}
+
+.avaliationFormContainer button {
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+}

@@ -1,0 +1,18 @@
+.numberToAdd {
+  border: 1px solid rgba(0, 0, 0, 0.616);
+  font-size: 1.2rem;
+  height: 2rem;
+  text-align: center;
+  width: 3rem;
+}
+
+.changeQuantityConainer {
+  margin: 5rem 0 1rem;
+}
+
+.minusPlus {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
