@@ -46,13 +46,13 @@ class ShoppingCart extends React.Component {
   render() {
     const { location } = this.props;
     const { state } = location;
-    const { idProduct, idCategory } = state;
+    const { idProduct, idCategory, product } = state;
     const path = idProduct === '' || idCategory === ''
       ? '/'
       : `/details/${idCategory}/${idProduct}`;
     return (
       <section>
-        <Link to={ path }>
+        <Link to={ { pathname: path, state: { product } } }>
           <button type="button">VOLTAR</button>
         </Link>
         <h1>Carrinho de Compras</h1>

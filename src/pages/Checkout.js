@@ -5,8 +5,8 @@ import CheckoutProductReview from '../components/CheckoutProductReview';
 import CheckoutPaymentMethod from '../components/CheckoutPaymentMethod';
 
 class Checkout extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       fullName: '',
       cpf: '',

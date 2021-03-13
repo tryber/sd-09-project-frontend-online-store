@@ -26,7 +26,11 @@ class Details extends React.Component {
         <p>{price}</p>
         {freeShipping && <p data-testid="free-shipping">Frete Grátis</p>}
         <Link to="/">Home</Link>
-        <ShoppingCartButton idProduct={ id } idCategory={ categoryId } />
+        <ShoppingCartButton
+          idProduct={ id }
+          idCategory={ categoryId }
+          product={ product }
+        />
         <AddToCartButton
           datatestid="product-detail-add-to-cart"
           productData={ { id, title, price, availableQuantity } }
