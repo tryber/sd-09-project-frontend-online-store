@@ -1,42 +1,158 @@
-.App {
+/* Arquivo SearchBar */
+.main {
+  flex-direction: column;
+}
+
+.main, .header {
+  align-items: center;
+  display: inline;
+  justify-content: center;
+  width: 900px;
+}
+
+.header {
+  height: 100vh;
+}
+
+.master-container {
+  display: flex;
+}
+
+.message {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-bar-main {
+  border-radius: 15px;
+  height: 20px;
+  outline: none;
+  padding: 5px;
+  width: 60%;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
-
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-
+.shop-cart-main {
+  display: inline;
+  margin-left: 30px;
+  max-width: 35px;
+  transition: 150ms;
 }
 
-.App-header {
+.shop-cart-main:hover {
+  transform: scale(1.05);
+}
+
+.shop-cart-main:active {
+  transform: scale(0.95);
+}
+
+.btn-search {
+  background-color: rgb(225, 225, 225);
+  border-radius: 18px;
+  margin-left: 35px;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.btn-search:hover {
+  background-color: lightgray;
+}
+
+.btn-search:active {
+  background-color: rgb(232, 232, 232);
+}
+
+/* Arquivo ShopCart */
+.content-cart {
   align-items: center;
-  background-color: #282c34;
-  color: white;
+  display: flex;
+  margin: 40px 0 0 40px;
+}
+
+.previous-shop, .shop-cart-shop {
+  max-width: 50px;
+}
+
+.previous-shop {
+  display: block;
+  margin: 40px 0 0 40px;
+  transition: 150ms;
+}
+
+.previous-shop:hover {
+  transform: scale(1.05);
+}
+
+.cart-description {
+  font-weight: 800;
+  margin-left: 30px;
+}
+
+.content-empty {
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
+  margin: auto;
+  text-align: center;
+}
+
+.box-shop {
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.empty-message {
+  text-align: center;
+}
+
+/* Categorias */
+.content-category {
+  display: inline-block;
+}
+
+.category {
+  border: solid 1px black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  max-width: 250px;
+  padding: 10px;
+}
+
+/* Card */
+.alert-message {
+  text-align: center;
+}
+
+.card {
+  border: 1px solid;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 20%;
 }
 
-.App-link {
-  color: #61dafb;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.card-title {
+  font-size: 17px;
 }
+
+.image {
+  height: 110px;
+  margin: auto;
+  max-width: 180px;
+  overflow: hidden;
+}
+
+img {
+  max-width: 180px;
+}
+
