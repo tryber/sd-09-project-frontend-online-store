@@ -1,0 +1,33 @@
+.productContanerDetail {
+  align-items: center;
+  display: flex;
+  height: 20rem;
+  justify-content: space-between;
+  margin: 1rem;
+  width: 40rem;
+}
+
+.changePictureButton {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.322);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  font-size: 3rem;
+  font-weight: 900;
+  height: 5rem;
+  justify-content: space-between;
+  width: 5rem;
+}
+
+.changePictureButton:focus {
+  outline: none;
+}
+
+/* .changePictureButton:nth-child(1) {
+  float: left;
+}
+
+.changePictureButton:nth-last-child(1) {
+  right: 60px;
+} */

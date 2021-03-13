@@ -7,7 +7,6 @@ class CardShoppingCart extends Component {
   constructor(props) {
     super(props);
     const { quantity } = props.product;
-    console.log(quantity);
     this.increaseQuantity = this.increaseQuantity.bind(this);
     this.decreaseQuantity = this.decreaseQuantity.bind(this);
     this.state = { quantity };

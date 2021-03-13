@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { TiArrowBackOutline, TiShoppingCart } from 'react-icons/ti';
-// import * as api from '../services/api';
-// import Loading from '../Components/Loading/Loading';
 import Cart from '../services/Data';
 import './ProductDetails.css';
 import ButtonsCardDetails from '../Components/ButtonsCardDetails/ButtonsCardDetails';
@@ -13,6 +11,7 @@ import CounterCard from '../Components/CounterCart/CounterCard';
 export default class ProductDetails extends Component {
   constructor(state) {
     super(state);
+    this.searchForID = this.searchForID.bind(this);
     this.addCartItem = this.addCartItem.bind(this);
     this.counterCart = this.counterCart.bind(this);
     this.state = {
@@ -27,12 +26,6 @@ export default class ProductDetails extends Component {
     const { id } = match.params;
     const resp = await fetch(`https://api.mercadolibre.com/items?ids=${id}`);
     const result = await resp.json();
-    // const { location } = this.props;
-    // const { search } = location;
-    // const query = search.slice(1);
-    // const product = await api.getProductsFromCategoryAndQuery(category, query);
-    // const selectedProduct = product.results
-    //   .find((value) => value.id === id);
     this.counterCart();
     this.addProductOnState(result[0].body);
   }
@@ -41,9 +34,11 @@ export default class ProductDetails extends Component {
     let counter = 0;
     Cart.forEach((value) => { counter += value.quantity; });
     this.setState({ quantDetail: counter });
+
   }
 
   addProductOnState(selectedProduct) {
+    console.log(selectedProduct);
     this.setState({ product: selectedProduct, loading: false });
   }
 
@@ -79,7 +74,9 @@ export default class ProductDetails extends Component {
       <div>
         <div className="headerLinks">
           <Link to="/" className="linkShoppingCart">
-            <div><TiArrowBackOutline /></div>
+            <div>
+              <TiArrowBackOutline />
+            </div>
           </Link>
           <Link
             className="linkShoppingCart"
@@ -90,26 +87,21 @@ export default class ProductDetails extends Component {
             <CounterCard total={ quantDetail } />
           </Link>
         </div>
-        <div data-testid="product-detail-name">
-          <div data-testid="product">
-            <div className="titleDetails">
-              { `${title} - ` }
-              { price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }
-            </div>
-            <div className="productContanerDetail">
-              <img src={ product.thumbnail } alt={ `foto-${product.title}` } />
-            </div>
+        <div data-testid="product-detail-name" className="productContainer">
+          <PictureCardDetail pictures={ pictures } title={ title } />
+          <div className="titleDetails">
+            { title }
+            { price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }
+            <ButtonsCardDetails product={ product } />
+            <button
+              className="detailsToAddCart"
+              type="button"
+              data-testid="product-detail-add-to-cart"
+              onClick={ () => this.addCartItem(product) }
+            >
+              Adicionar ao carrinho
+            </button>
           </div>
-        </div>
-        <div className="buttonsCardDetails">
-          <ButtonsCardDetails product={ product } />
-          <button
-            type="button"
-            data-testid="product-detail-add-to-cart"
-            onClick={ () => this.addCartItem(product) }
-          >
-            Adicionar ao carinho
-          </button>
         </div>
         <AvaliationForm />
       </div>
@@ -118,8 +110,8 @@ export default class ProductDetails extends Component {
 }
 
 ProductDetails.propTypes = {
-  match: PropTypes.objectOf({
-    params: PropTypes.objectOf({
+  match: PropTypes.shape({
+    params: PropTypes.shape({
       id: PropTypes.string.isRequired,
       category: PropTypes.string.isRequired,
     }).isRequired,

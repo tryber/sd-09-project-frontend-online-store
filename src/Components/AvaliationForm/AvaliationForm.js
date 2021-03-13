@@ -8,7 +8,7 @@ class AvaliationForm extends Component {
         <h3>Avaliações</h3>
         <form className="avaliationFormContainer">
           <div>
-            <input type="email" placeholder="Email" isRequired />
+            <input type="email" placeholder="Email" required />
           </div>
           <textarea
             placeholder="Mensagem (opcional)"

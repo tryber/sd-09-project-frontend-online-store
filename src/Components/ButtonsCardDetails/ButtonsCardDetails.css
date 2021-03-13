@@ -1,17 +1,16 @@
 .numberToAdd {
   border: 1px solid rgba(0, 0, 0, 0.616);
-  border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   height: 2rem;
   text-align: center;
-  width: 2rem;
+  width: 3rem;
 }
 
 .changeQuantityConainer {
-  margin: 0 1rem;
+  margin: 5rem 0 1rem;
 }
 
-.changeQuantityConainer button {
+.minusPlus {
   background: none;
   border: none;
   font-size: 1.5rem;
