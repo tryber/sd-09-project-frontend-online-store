@@ -1,0 +1,56 @@
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.card {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  justify-content: space-between;
+  margin: 2rem;
+  text-align: center;
+  width: 200px;
+}
+
+.card-title {
+  align-items: center;
+  border-bottom: 2px solid black;
+  display: flex;
+  height: 80px;
+  margin: 0;
+  padding: 5px;
+}
+
+.card-img {
+  max-height: 250px;
+}
+
+.card-price {
+  align-items: center;
+  border-top: 2px solid black;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin: 0;
+}
+
+.assessment-card {
+  border: 1px solid black;
+}
+
+.assessment-div {
+  align-items: center;
+  display: flex;
+}
+
+.assessment-email {
+  margin: 0 5px;
+}
+
+.assessment-mensagem {
+  margin: 0 5px 5px;
+}
