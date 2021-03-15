@@ -1,0 +1,31 @@
+.cart {
+  margin-left: 1200px;
+}
+
+.title {
+  font-size: 20px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.price {
+  margin-left: 30px;
+}
+
+.currency {
+  margin-left: 30px;
+}
+
+.products-image-full {
+  display: block;
+  height: auto;
+  margin-left: 30px;
+  width: 250px;
+}
+
+.button-cart-full {
+  border-radius: 10px;
+  display: block;
+  font-size: 17px;
+  margin-left: 80px;
+}

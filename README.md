@@ -374,7 +374,7 @@ O que será verificado:
   - Implementa a função `getProductsFromCategoryAndQuery`.
 ```
 
-#### 2. Crie uma página de listagem de produtos vazia
+#### 2. Crie uma página de listagem de produtos vazia  
 
 **PRIORIDADE 0** - Criar o campo de busca da tela principal, a listagem de produtos, inicialmente vazia. A listagem vazia deve conter a mensagem "Digite algum termo de pesquisa ou escolha uma categoria".
 

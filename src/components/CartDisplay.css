@@ -1,0 +1,52 @@
+.remove {
+  padding: 20px;
+  width: 30px;
+}
+
+.image-cart {
+  width: 80px;
+}
+
+.items-cart {
+  margin-top: 20px;
+}
+
+.title-cart {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 500px;
+}
+
+.minus-icon {
+  margin-left: 30px;
+  padding: 5px;
+  width: 30px;
+}
+
+.plus-icon {
+  margin-left: 30px;
+  padding: 5px;
+  width: 30px;
+}
+
+.quantity {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.total-price {
+  float: right;
+  font-size: 18px;
+  margin-right: 520px;
+  margin-top: 65px;
+  text-align: right;
+}
+
+.currency-cart {
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
+  text-align: right;
+}

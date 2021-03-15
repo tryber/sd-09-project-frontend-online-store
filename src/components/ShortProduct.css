@@ -1,0 +1,41 @@
+.products {
+  border: 2px solid black;
+  border-radius: 20px;
+  display: inline-block;
+  height: 400px;
+  margin: 5px;
+  margin-top: 15px;
+  padding: 5px;
+  text-decoration: none;
+  width: 200px;
+}
+
+.products-title {
+  font-size: 15px;
+  height: 50px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.products-image {
+  display: block;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  width: 150px;
+}
+
+.products-price {
+  font-size: 22px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.button-cart {
+  border-radius: 10px;
+  display: block;
+  font-size: 17px;
+  margin-left: auto;
+  margin-right: auto;
+}

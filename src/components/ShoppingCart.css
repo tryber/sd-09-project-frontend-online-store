@@ -1,0 +1,19 @@
+.shopping-cart {
+  font-size: 18px;
+  padding: 20px;
+}
+
+.total-value {
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.button-finish {
+  border-radius: 10px;
+  display: block;
+  font-size: 20px;
+  height: 35px;
+  margin-left: 20;
+  margin-top: 25px;
+  width: 250px;
+}
