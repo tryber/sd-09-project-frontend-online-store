@@ -1,0 +1,43 @@
+.checkout-container {
+  min-height: 77.6vh;
+  text-align: center;
+}
+
+.product-overview-container {
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.list-item {
+  margin: 10px;
+}
+
+.buyer-information-container {
+  border: 1px solid black;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.buyer-information-container input {
+  height: 25px;
+  margin: 10px;
+  width: 75%;
+}
+
+.payment-method-container {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.finish-buy-btn {
+  background: green;
+  color: white;
+  height: 30px;
+  margin-top: 10px;
+  width: 50%;
+}
