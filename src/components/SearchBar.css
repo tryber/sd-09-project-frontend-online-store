@@ -1,0 +1,18 @@
+.search-bar-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.search-bar-input {
+  border: 2px solid gray;
+  border-radius: 8px;
+  height: 25px;
+  margin: 15px auto;
+  padding-left: 10px;
+  width: 500px;
+}
+
+.search-bar-button {
+  margin-left: 5px;
+}

@@ -1,0 +1,7 @@
+.product {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 5px;
+  min-width: 300px;
+  width: 300px;
+}
