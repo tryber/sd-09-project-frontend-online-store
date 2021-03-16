@@ -1,7 +1,6 @@
 .crt-size-dpl {
-  background-color: cornflowerblue;
-  border-radius: 100%;
+  background-color: black;
   color: azure;
-  font-size: x-small;
+  font-size: 1rem;
   font-weight: 500;
 }

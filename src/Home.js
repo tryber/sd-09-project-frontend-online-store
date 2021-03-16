@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { getCategories, getProductsFromCategoryAndQuery } from './services/api';
 import Categories from './Categories';
 import Products from './Products';
+import carticon from './cartIcon.svg';
 
 import './Home.css';
 import CartQuantity from './CartQuantity';
@@ -86,7 +87,7 @@ class Home extends Component {
           data-testid="shopping-cart-button"
           className="button-link"
         >
-          Adicionar ao Carrinho
+          <img style={ { height: '25px' } } src={ carticon } alt="Cart icon" />
           <CartQuantity totalProducts={ totalProducts } />
         </Link>
         {
