@@ -10,8 +10,6 @@ class ItemCart extends Component {
 
     this.quantitySum = this.quantitySum.bind(this);
     this.quantitySub = this.quantitySub.bind(this);
-    this.quantityMin = this.quantityMin.bind(this);
-    this.quantityMax = this.quantityMax.bind(this);
   }
 
   quantitySum() {
@@ -26,28 +24,18 @@ class ItemCart extends Component {
     }));
   }
 
-  quantityMin() {
-    let min = false;
+  render() {
+    const { item: { title, thumbnail, price } } = this.props;
     const { quantity } = this.state;
+    let min = false;
     if (quantity <= 1) {
       min = true;
     }
-    return min;
-  }
-
-  quantityMax() {
     let max = false;
-    const { quantity } = this.state;
     const { item } = this.props;
     if (quantity >= item.available_quantify) {
       max = true;
     }
-    return max;
-  }
-
-  render() {
-    const { item: { title, thumbnail, price } } = this.props;
-    const { quantity } = this.state;
     return (
       <div data-testid="product">
         <h1 data-testid="shopping-cart-product-name">{title}</h1>
@@ -57,7 +45,7 @@ class ItemCart extends Component {
           type="button"
           onClick={ () => this.quantitySum() }
           data-testid="product-increase-quantity"
-          disabled={ this.quantityMax() }
+          disabled={ max }
         >
           +
         </button>
@@ -66,7 +54,7 @@ class ItemCart extends Component {
         </p>
         <button
           type="button"
-          onClick={ () => this.quantitySub() }
+          onClick={ min }
           data-testid="product-decrease-quantity"
           disabled={ this.quantityMin() }
         >
