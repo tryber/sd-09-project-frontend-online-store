@@ -8,15 +8,11 @@ import ProductDetail from './ProductDetail';
 class App extends Component {
   constructor(props) {
     super(props);
+    const itemsCartStorage = JSON.parse(localStorage.getItem('itemsCart' || []));
     this.state = {
-      itemsCart: [],
+      itemsCart: itemsCartStorage,
     };
     this.handleProduct = this.handleProduct.bind(this);
-    this.getLocalStorageData = this.getLocalStorageData.bind(this);
-  }
-
-  componentDidMount() {
-    this.getLocalStorageData();
   }
 
   componentDidUpdate() {
@@ -30,14 +26,9 @@ class App extends Component {
     const { itemsCart } = this.state;
     this.setState({
       itemsCart: [...itemsCart, item],
+    }, () => {
+      localStorage.setItem('itemsCart', JSON.stringify(itemsCart));
     });
-  }
-
-  getLocalStorageData() {
-    const itemsCartStorage = JSON.parse(localStorage.getItem('itemsCart' || []));
-    if (itemsCartStorage !== null) {
-      this.setState({ itemsCart: itemsCartStorage });
-    }
   }
 
   render() {

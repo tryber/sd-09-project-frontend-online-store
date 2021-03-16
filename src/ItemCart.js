@@ -28,7 +28,7 @@ class ItemCart extends Component {
     const { item: { title, thumbnail, price } } = this.props;
     const { quantity } = this.state;
     let min = false;
-    if (quantity <= 1) {
+    if (quantity <= 0) {
       min = true;
     }
     let max = false;
