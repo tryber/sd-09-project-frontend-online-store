@@ -1,0 +1,13 @@
+.rating-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rate-star {
+  margin: 0;
+  padding: 0 5px;
+}
+
+.rating-input {
+  display: none;
+}
