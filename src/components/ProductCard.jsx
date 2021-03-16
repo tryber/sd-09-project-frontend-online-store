@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 class ProductCard extends React.Component {
   constructor(props) {
     super(props);
-    const { cartItens } = this.props;
+    const { cartItems } = this.props;
     this.state = {
-      shoppingCart: [...cartItens],
+      shoppingCart: [...cartItems],
     };
   }
 
@@ -62,6 +62,7 @@ class ProductCard extends React.Component {
 ProductCard.propTypes = {
   products: PropTypes.arrayOf().isRequired,
   onClick: PropTypes.func.isRequired,
+  cartItems: PropTypes.arrayOf().isRequired,
 };
 
 export default ProductCard;
