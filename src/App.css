@@ -28,7 +28,7 @@
 
 .card {
   animation: ease-in-out;
-  box-shadow: 0px 0px 15px -5px;
+  box-shadow: 0 0 15px -5px;
   height: 300px;
   margin: 10px;
   overflow: hidden;
@@ -37,9 +37,9 @@
 }
 
 .card-button {
+  background-color: yellow;
   border: none;
   padding: 0.5rem;
-  background-color: yellow;
 }
 
 .card-button:hover {
@@ -60,14 +60,14 @@
 }
 
 .card:hover {
-  box-shadow: 0px 0px 15px 0px;
+  box-shadow: 0 0 15px 0px;
   transform: scale(1.1);
 }
 
 .categories-list {
   align-items: flex-start;
   background-color: whitesmoke;
-  box-shadow: 0px 0px 15px -5px;
+  box-shadow: 0 0 15px -5px;
   display: flex;
   flex-direction: column;
   margin: 10px 30px;
@@ -96,16 +96,16 @@
   justify-content: center;
 }
 
-.shopping-card-product {
-  display: flex;
-  align-items: center;
+.shopping-card-image {
   margin: 10px;
-  width: fit-content;
+  width: 100px;
 }
 
-.shopping-card-image {
-  width: 100px;
+.shopping-card-product {
+  align-items: center;
+  display: flex;
   margin: 10px;
+  width: fit-content;
 }
 
 .shopping-card-title {
