@@ -1,0 +1,14 @@
+.d-flex {
+  display: flex;
+}
+
+.aside {
+  align-self: flex-start;
+  margin: 10px;
+}
+
+.categories-list {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 50px;
+}
