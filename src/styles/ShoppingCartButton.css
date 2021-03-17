@@ -1,0 +1,22 @@
+.shopping-cart-button {
+  background: white;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(27, 78, 163, 0.2) , 0 4px 8px rgba(41, 121, 255, 0.2);
+  color: #2264d1;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 40px;
+  line-height: 150%;
+  width: 99px;
+}
+
+.container-shopping-cart-button {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 72px;
+  top: 16px;
+}

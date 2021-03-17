@@ -1,0 +1,25 @@
+.container-products-carts {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.cartBtn-finish {
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 600;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.thumbnail {
+  max-width: 130px;
+}

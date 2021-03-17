@@ -1,0 +1,38 @@
+.input-search-bar {
+  background: url('../utils/images/lupa.svg') 15px no-repeat #ededf0;
+  border: none;
+  border-radius: 99px;
+  height: 36px;
+  padding-left: 45px;
+  width: 668px;
+}
+
+.button-search-bar {
+  background: white;
+  border: 1px solid #9dc2ff;
+  border-radius: 99px;
+  color: #2264d1;
+  font-size: 14px;
+  font-weight: 700;
+  height: 36px;
+  line-height: 143%;
+  margin-left: 15px;
+  width: 88px;
+}
+
+.container-search-bar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.message-search {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.content-and-seacrh-bar {
+  display: flex;
+}
