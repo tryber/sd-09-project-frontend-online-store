@@ -60,7 +60,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 0 15px 0px;
+  box-shadow: 0 0 15px 0;
   transform: scale(1.1);
 }
 
