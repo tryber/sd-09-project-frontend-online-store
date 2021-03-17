@@ -1,0 +1,8 @@
+div .product {
+  align-content: center;
+  background-color: gray;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+  width: 250px;
+}
