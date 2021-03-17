@@ -30,8 +30,10 @@ class Categories extends React.Component {
     const { onChange } = this.props;
     if (promisse === true) {
       return (
-        <section className="categories-list">
-          <h4 className="categories-list-title">Categorias:</h4>
+        <nav className="categories-list">
+          <div>
+            <h4 className="categories-list-title">Categorias:</h4>
+          </div>
           { categories
             .map((category) => (
               <InputCategory
@@ -42,7 +44,7 @@ class Categories extends React.Component {
                 onChange={ onChange }
               />
             )) }
-        </section>
+        </nav>
       );
     }
     return <ol />;

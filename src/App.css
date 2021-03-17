@@ -22,15 +22,92 @@
   color: #61dafb;
 }
 
+.body-container {
+  display: flex;
+}
+
+.card {
+  animation: ease-in-out;
+  box-shadow: 0px 0px 15px -5px;
+  height: 300px;
+  margin: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  width: 200px;
+}
+
+.card-button {
+  border: none;
+  padding: 0.5rem;
+  background-color: yellow;
+}
+
+.card-button:hover {
+  font-size: 15px;
+}
+
+.card-container {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  max-width: 800rem;
+}
+
+.card-image img {
+  height: 80px;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 15px 0px;
+  transform: scale(1.1);
+}
+
 .categories-list {
   align-items: flex-start;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 15px -5px;
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  padding: 10px;
+  margin: 10px 30px;
+  width: 250px;
 }
 
 .categories-list-title {
-  margin: 20px;
-  padding: 0 10px;
+  background-color: black;
+  color: whitesmoke;
+  margin: 0;
+  padding: 10px 50px;
+  width: 150px;
+}
+
+.header-container {
+  background-color: black;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+.search-container {
+  align-content: space-between;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+}
+
+.shopping-card-product {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: fit-content;
+}
+
+.shopping-card-image {
+  width: 100px;
+  margin: 10px;
+}
+
+.shopping-card-title {
+  margin: 10px;
 }
