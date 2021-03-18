@@ -118,7 +118,12 @@ Este repositório **já conta com uma `main-group` para cada grupo**, identifica
   * Adicione o arquivo alterado ao _stage_ do Git
       * Exemplo:
         * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (devem aparecer listadas as novas alterações em verde)
+        * `git status` (devem aparecer listadas as noch } from 'react-router-dom';
+import ShoppingCart from './Components/ShoppingCart';
+import Home from './Components/home'
+
+
+function App() {vas alterações em verde)
   * Faça seus `commit`
       * Exemplo:
         * `git commit -m 'cria componente de busca`
