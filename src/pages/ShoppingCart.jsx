@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import '../styles/pages/ShoppingCart.css';
 
 class ShoppingCart extends React.Component {
   constructor(props) {
@@ -12,10 +14,15 @@ class ShoppingCart extends React.Component {
     };
   }
 
+  functionToRemoveObject(shoppingCart, obj) {
+    const indexOfObjectToRemove = shoppingCart.filter((cartObj) => cartObj.id !== obj.id);
+    return indexOfObjectToRemove;
+  }
+
   productIncrease(product) {
     const { shoppingCart } = this.state;
     const newCart = shoppingCart.map((obj) => {
-      if (obj.id === product.id) {
+      if (obj.id === product.id && obj.available_quantity > obj.quantity) {
         obj.quantity += 1;
       }
       return obj;
@@ -25,12 +32,15 @@ class ShoppingCart extends React.Component {
 
   productDecrease(product) {
     const { shoppingCart } = this.state;
-    const newCart = shoppingCart.map((obj) => {
-      if (obj.id === product.id) {
+    let newCart = shoppingCart.map((obj) => {
+      if (obj.id === product.id && obj.quantity > 0) {
         obj.quantity -= 1;
       }
       return obj;
     });
+    if (product.quantity <= 0) {
+      newCart = this.functionToRemoveObject(shoppingCart, product);
+    }
     this.setState({ shoppingCart: newCart });
   }
 
@@ -38,15 +48,21 @@ class ShoppingCart extends React.Component {
     const { shoppingCart } = this.state;
     if (shoppingCart.length === 0) {
       return (
-        <span data-testid="shopping-cart-empty-message">
+        <span className="textOfEmptyCart" data-testid="shopping-cart-empty-message">
           Seu carrinho está vazio
         </span>
       );
     }
 
     return shoppingCart.map((product) => (
-      <div key={ Math.random() }>
-        <button type="button">x</button>
+      <div className="cartProduct" key={ Math.random() }>
+        <img src={ product.thumbnail } alt={ product.title } />
+        <button
+          type="button"
+          onClick={ () => this.functionToRemoveObject(shoppingCart, product) }
+        >
+          x
+        </button>
         <span data-testid="shopping-cart-product-name">{ product.title }</span>
         <button
           type="button"
@@ -68,9 +84,20 @@ class ShoppingCart extends React.Component {
   }
 
   render() {
+    const { shoppingCart } = this.state;
+    const { getCheckout } = this.props;
     return (
       <div>
-        { this.renderShoppingCart() }
+        <div className="selectedItems">
+          { this.renderShoppingCart() }
+        </div>
+        <Link
+          to="/checkout"
+          data-testid="checkout-products"
+          onClick={ () => getCheckout(shoppingCart) }
+        >
+          Checkout
+        </Link>
       </div>
     );
   }

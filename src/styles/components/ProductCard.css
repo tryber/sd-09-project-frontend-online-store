@@ -1,7 +1,11 @@
 .product {
   border: 1px solid black;
   border-radius: 8px;
-  margin: 5px;
-  min-width: 300px;
+  margin: 0.25vw;
   width: 300px;
+}
+
+.product > img {
+  height: 90px;
+  width: 90px;
 }

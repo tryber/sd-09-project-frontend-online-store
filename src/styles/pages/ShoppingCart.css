@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.selectedItems {
+  border: 1px solid black;
+  border-radius: 8px;
+  box-sizing: content-box;
+}
+
+.textOfEmptyCart {
+  padding: 5vh;
+}
+
+.cartProduct {
+  margin: 0.25vw;
+}
+
+.cartProduct > img {
+  height: 90px;
+  width: 90px;
+}

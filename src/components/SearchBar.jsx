@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './SearchBar.css';
+import '../styles/components/SearchBar.css';
 import ShoppingCartButton from './ShoppingCartButton';
 
 class SearchBar extends React.Component {

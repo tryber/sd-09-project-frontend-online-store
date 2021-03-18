@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CategoryCard from './CategoryCard';
 import * as api from '../services/api';
-import './CategoryList.css';
+import '../styles/components/CategoryList.css';
 
 class CategoryList extends React.Component {
   constructor(props) {

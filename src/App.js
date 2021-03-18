@@ -3,17 +3,27 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ProductList from './pages/ProductList';
 import ProductDetails from './pages/ProductDetails';
 import ShoppingCart from './pages/ShoppingCart';
-import './App.css';
+import './styles/App.css';
+import CheckoutOrder from './pages/CheckoutPage';
+import Form from './components/Forms';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.addToCart = this.addToCart.bind(this);
     this.getProductFromCard = this.getProductFromCard.bind(this);
+    this.getCheckout = this.getCheckout.bind(this);
     this.state = {
       product: {},
       shoppingCart: [],
+      checkout: [],
     };
+  }
+
+  getCheckout(checkout) {
+    this.setState({
+      checkout,
+    });
   }
 
   getProductFromCard(event, currentProduct) {
@@ -36,7 +46,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { shoppingCart, product } = this.state;
+    const { shoppingCart, product, checkout } = this.state;
     return (
       <BrowserRouter>
         <div className="App">
@@ -57,6 +67,7 @@ class App extends React.Component {
                   <ShoppingCart
                     { ...props }
                     shoppingCart={ shoppingCart }
+                    getCheckout={ this.getCheckout }
                   />
                 ) }
               />
@@ -68,6 +79,15 @@ class App extends React.Component {
                     product={ product }
                     getProductFromCard={ this.getProductFromCard }
                   />) }
+              />
+              <Route
+                path="/checkout"
+                render={ (props) => (
+                  <>
+                    <CheckoutOrder { ...props } checkout={ checkout } />
+                    <Form />
+                  </>
+                ) }
               />
             </Switch>
           </Route>
