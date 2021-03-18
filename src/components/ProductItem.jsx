@@ -11,6 +11,7 @@ export default class ProductItem extends Component {
       title,
       image,
       price,
+      id,
     };
   }
 
@@ -21,7 +22,7 @@ export default class ProductItem extends Component {
   }
 
   render() {
-    const { title, image, price } = this.state;
+    const { title, image, price, id } = this.state;
     return (
       <div data-testid="product" className="card">
         <header>
@@ -55,4 +56,5 @@ ProductItem.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };

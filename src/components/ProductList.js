@@ -54,6 +54,7 @@ class ProductList extends Component {
 
   render() {
     const { query, products } = this.state;
+    console.log(products);
     return (
       <main>
         <header className="header-container">
