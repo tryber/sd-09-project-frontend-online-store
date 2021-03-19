@@ -26,11 +26,13 @@ class Checkout extends React.Component {
     return (
       <fieldset>
         <h3>Revise seus produtos</h3>
-        { products.map(({ id, thumbnail, title, price }) => (
+        { products.map(({ id, thumbnail, title, price, freeShipping,
+        }) => (
           <div key={ id }>
             <h4 data-testid="shopping-cart-product-name">{ title }</h4>
             <img src={ thumbnail } alt={ title } />
             <span>{`R$ ${price}`}</span>
+            { freeShipping && <h4 data-testid="free-shipping">Frete grátis</h4>}
           </div>
         ))}
         {/* <div>

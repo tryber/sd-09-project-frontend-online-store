@@ -6,9 +6,22 @@ import ProductRating from './ProductRating';
 class Detalhes extends React.Component {
   render() {
     const {
-      addToCart, handleCartItemsQuantity, cartItemsQuantity,
-      location: { state: { detalhes: { id, price, thumbnail, title,
-      } } } } = this.props;
+      addToCart,
+      handleCartItemsQuantity,
+      cartItemsQuantity,
+      location: {
+        state: {
+          detalhes: {
+            id,
+            price,
+            thumbnail,
+            title,
+            availableQuantity,
+            freeShipping,
+          },
+        },
+      },
+    } = this.props;
     return (
       <div data-testid="product" key={ id }>
         <Link data-testid="shopping-cart-button" to="/carrinho">
@@ -18,11 +31,16 @@ class Detalhes extends React.Component {
         <h4 data-testid="product-detail-name">{ title }</h4>
         <img src={ thumbnail } alt={ title } />
         <p>{`R$ ${price}`}</p>
+        <p>
+          Quantidade em estoque:
+          { availableQuantity }
+        </p>
+        { freeShipping && <h4 data-testid="free-shipping">Frete grátis</h4>}
         <button
           data-testid="product-detail-add-to-cart"
           type="button"
           onClick={ (event) => {
-            addToCart({ title, thumbnail, price, id }, event);
+            addToCart({ title, thumbnail, price, id, availableQuantity }, event);
             handleCartItemsQuantity(1);
           } }
         >
@@ -44,6 +62,7 @@ Detalhes.propTypes = {
         price: PropTypes.string,
         thumbnail: PropTypes.string,
         title: PropTypes.string,
+        availableQuantity: PropTypes.number,
       }),
     }),
   }),
