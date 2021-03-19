@@ -1,0 +1,9 @@
+.defaultMessage {
+  text-align: center;
+}
+
+.searchInput {
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 80%;
+}
