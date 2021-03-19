@@ -7,14 +7,6 @@
   pointer-events: none;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
-
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-
-}
-
 .App-header {
   align-items: center;
   background-color: #282c34;
@@ -30,13 +22,92 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.body-container {
+  display: flex;
+}
 
-  from {
-    transform: rotate(0deg);
-  }
+.card {
+  animation: ease-in-out;
+  box-shadow: 0 0 15px -5px;
+  height: 300px;
+  margin: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  width: 200px;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.card-button {
+  background-color: yellow;
+  border: none;
+  padding: 0.5rem;
+}
+
+.card-button:hover {
+  font-size: 15px;
+}
+
+.card-container {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  max-width: 800rem;
+}
+
+.card-image img {
+  height: 80px;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px 0;
+  transform: scale(1.1);
+}
+
+.categories-list {
+  align-items: flex-start;
+  background-color: whitesmoke;
+  box-shadow: 0 0 15px -5px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+  width: 250px;
+}
+
+.categories-list-title {
+  background-color: black;
+  color: whitesmoke;
+  margin: 0;
+  padding: 10px 50px;
+  width: 150px;
+}
+
+.header-container {
+  background-color: black;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+.search-container {
+  align-content: space-between;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+}
+
+.shopping-card-image {
+  margin: 10px;
+  width: 100px;
+}
+
+.shopping-card-product {
+  align-items: center;
+  display: flex;
+  margin: 10px;
+  width: fit-content;
+}
+
+.shopping-card-title {
+  margin: 10px;
 }
