@@ -1,42 +1,61 @@
-.App {
+.aside-categories {
+  background-color: gainsboro;
+  border-color: #282c34;
+  border-style: solid;
+  border-width: 2px;
+  float: left;
+  width: 20%;
+}
+
+.aside-categories h3 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.aside-categories ul {
+
+  /*  https://pt.stackoverflow.com/questions/424667/como-tirar-esse-pontos  */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
+.aside-categories li {
 
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-
+  /*  https://pt.stackoverflow.com/questions/424667/como-tirar-esse-pontos  */
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-top: 3px;
 }
 
-.App-header {
+.header {
   align-items: center;
-  background-color: #282c34;
-  color: white;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  padding: 10px 30px;
+}
+
+.arrow-back {
+  padding: 5px 30px;
+}
+
+.shopping-icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.input-search {
+  border-radius: 30px;
+  height: 35px;
+  margin-right: 30px;
+  outline: none;
+  width: 100%;
+}
+
+.main {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
   justify-content: center;
-  min-height: 100vh;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
