@@ -1,0 +1,13 @@
+main {
+  margin: 30px auto;
+  width: 70%;
+}
+
+.not-found-msg p {
+  background-color: red;
+  height: 120px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  transition: 2000ms;
+}

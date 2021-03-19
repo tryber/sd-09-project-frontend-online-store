@@ -1,0 +1,28 @@
+aside {
+  min-width: 250px;
+  padding: 20px;
+}
+
+.category-button {
+  background-color: white;
+  border: 2px solid #555;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 4px 0;
+  outline: transparent;
+  padding: 2px 8px;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+
+.category-button:hover {
+  background-color: #555;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
