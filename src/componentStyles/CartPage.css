@@ -1,0 +1,11 @@
+.cart-product {
+  width: 300px;
+}
+
+.cart-product img {
+  width: 50%;
+}
+
+.cart-product-title {
+  font-size: 16px;
+}
