@@ -1,0 +1,25 @@
+.main-container {
+  display: flex;
+}
+
+.categories {
+  width: 20%;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  height: 4vh;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.link {
+  padding-right: 20px;
+}
+
+.results {
+  margin: auto;
+  text-align: center;
+  width: 75%;
+}
