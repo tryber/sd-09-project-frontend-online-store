@@ -1,0 +1,10 @@
+.content {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.evaluation-coment {
+  height: 100px;
+  margin-top: 5px;
+  width: 300px;
+}

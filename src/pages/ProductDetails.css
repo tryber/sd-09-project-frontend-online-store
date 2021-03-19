@@ -1,0 +1,33 @@
+.content-product {
+  display: flex;
+  flex-direction: column;
+  margin: 3%;
+}
+
+.header-product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-product {
+  text-align: center;
+}
+
+.details-product {
+  display: flex;
+  margin-top: 1.5%;
+}
+
+.title-product {
+  margin-bottom: 40px;
+}
+
+.head-product img {
+  width: auto;
+}
+
+.body-product {
+  border: 1px solid;
+  margin-left: 5%;
+  padding: 1%;
+}

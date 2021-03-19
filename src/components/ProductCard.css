@@ -1,0 +1,32 @@
+.product-card {
+  border: 1px solid;
+  border-color: black;
+  border-radius: 10px;
+  margin: 5px;
+  width: 300px;
+}
+
+.title-card {
+  background-color: #eee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  height: 32px;
+}
+
+p {
+  margin: 0;
+  padding: 5px;
+}
+
+.title-card p {
+  margin: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.body-card {
+  padding: 20px;
+  text-align: center;
+}

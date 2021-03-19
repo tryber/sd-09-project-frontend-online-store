@@ -1,0 +1,10 @@
+.ProductList {
+  display: flex;
+  width: 100%;
+}
+
+.SearchArea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
