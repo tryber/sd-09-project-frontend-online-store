@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RatingEvaluation from './RatingEvaluation';
+import '../styles/components/ProductEvaluation.css';
 
 class ProductEvaluation extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class ProductEvaluation extends Component {
   render() {
     const { rating } = this.state;
     return (
-      <div>
+      <div className="product-evaluation-main">
         Avaliações
         <form>
           <fieldset>

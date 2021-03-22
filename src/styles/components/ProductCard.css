@@ -34,6 +34,7 @@ a {
 }
 
 .product-card > * > :nth-child( 2 ) {
+  font-weight: 500;
   margin: 10px;
   min-height: 80px;
 }
@@ -45,7 +46,7 @@ a {
 .product-card > button {
   background-color: rgb(88, 88, 88);
   border: none;
-  border-radius: 3px;
+  border-radius: 17px;
   color: white;
   font-weight: 700;
   margin: 10px;
@@ -54,6 +55,7 @@ a {
 }
 
 .product-card > button:hover {
+  background-color: rgb(53, 53, 53);
   opacity: 1;
 }
 

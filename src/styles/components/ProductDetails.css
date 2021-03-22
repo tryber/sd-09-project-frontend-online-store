@@ -6,21 +6,22 @@
 .card {
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: 70vh;
   justify-content: center;
 }
 
 .content-card {
-  border: 2px solid rgb(221, 221, 221);
   border-radius: 4px;
+  box-shadow: 0 1px 5px 4px rgb(200 200 200);
   margin: 0 5px;
   padding: 15px;
 }
 
 .img-card {
-  border: 2px solid rgb(221, 221, 221);
   border-radius: 4px;
-  margin: 0 5px;
+  box-shadow: 0 1px 5px 4px rgb(200 200 200);
+  margin-right: 30px;
+  padding: 87px;
 }
 
 .cart-icon {
@@ -44,4 +45,23 @@
 .links-back-cart {
   display: flex;
   justify-content: space-between;
+}
+
+.card > :nth-child( 2 ) > :nth-child( 1 ) {
+  font-weight: 500;
+  max-width: 78%;
+}
+
+.content-card button {
+  background-color: rgb(156, 156, 156);
+  border: none;
+  border-radius: 17px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+}
+
+.content-card button:hover {
+  background-color: rgb(53, 53, 53);
 }

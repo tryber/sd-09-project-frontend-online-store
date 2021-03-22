@@ -1,0 +1,20 @@
+fieldset {
+  align-items: flex-start;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 10px;
+}
+
+fieldset button {
+  margin-top: 10px;
+}
+
+fieldset > :nth-child( 2 ) {
+  margin: 10px 0;
+}
+
+.product-evaluation-main {
+  display: flex;
+  margin-top: 10px;
+}
