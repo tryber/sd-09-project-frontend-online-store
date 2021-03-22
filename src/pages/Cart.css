@@ -1,0 +1,23 @@
+.shopping-cart-header {
+  background: fuchsia;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.shopping-cart-item {
+  border: 1px solid #333;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.shopping-cart-item img {
+  max-width: 25%;
+}
+
+.shopping-cart-item h1 {
+  max-width: 50%;
+}
