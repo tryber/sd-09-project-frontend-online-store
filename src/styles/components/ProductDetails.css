@@ -1,0 +1,47 @@
+.img-card img {
+  height: 230px;
+  width: 250px;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.content-card {
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 4px;
+  margin: 0 5px;
+  padding: 15px;
+}
+
+.img-card {
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+.cart-icon {
+  background: url('https://image.flaticon.com/icons/png/512/126/126083.png') no-repeat;
+  background-size: contain;
+  border: none;
+  height: 40px;
+  margin: 30px;
+  width: 40px;
+}
+
+.shopping-cart-button {
+  background: url('/images/icons8-undo-52.png') no-repeat;
+  background-size: contain;
+  border: none;
+  height: 30px;
+  margin: 30px;
+  width: 30px;
+}
+
+.links-back-cart {
+  display: flex;
+  justify-content: space-between;
+}

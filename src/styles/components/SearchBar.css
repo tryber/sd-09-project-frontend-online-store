@@ -1,0 +1,44 @@
+.search-bar-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  max-height: 100px;
+  width: 100%;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.search-bar-wrapper > div > input {
+  font-weight: 700;
+  margin-top: 20px;
+  width: 400px;
+}
+
+.search-bar-wrapper > div > button {
+  background-color: rgb(88, 88, 88);
+  color: white;
+}
+
+.search-bar-container > :nth-child( 2 ) {
+  width: 40px;
+}
+
+.search-bar-container > :nth-child( 2 ) > button:hover {
+  cursor: pointer;
+}
+
+@media only screen and ( max-width : 1400px ) {
+
+  .search-bar-container {
+    margin: auto;
+    width: 90%;
+  }
+
+}

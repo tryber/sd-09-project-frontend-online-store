@@ -1,0 +1,56 @@
+.empty-message-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.empty-message-container > img {
+  height: 100px;
+  width: 100px;
+}
+
+.cart-header-container {
+  display: flex;
+  height: 10%;
+}
+
+.cart-header-container > :nth-child( 1 ) {
+  width: 40px;
+}
+
+.cart-header-container > :nth-child( 1 ) > button {
+  background: url('/images/icons8-undo-52.png') no-repeat;
+  background-size: contain;
+  border: none;
+  height: 30px;
+  margin: 30px;
+  width: 30px;
+}
+
+.shopping-cart-list h2 {
+  margin: 0 0 50px 50px;
+}
+
+.shopping-cart-list h4 {
+  margin: 50px 0 50px 50px;
+}
+
+.checkout-button {
+  background-color: green;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: 700;
+  height: 30px;
+  margin: 0 0 50px 50px;
+  opacity: 0.7;
+  width: 150px;
+}
+
+.checkout-button:hover {
+  opacity: 1;
+}

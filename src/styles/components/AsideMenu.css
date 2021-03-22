@@ -1,0 +1,49 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.categories-content {
+  background-color: rgb(252, 252, 252);
+  border: 1px solid rgb(230, 230, 230);
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  top: 0;
+  z-index: 1;
+}
+
+.categories-content li {
+  color: #818181;
+  display: block;
+  font-size: 15px;
+  padding: 6px 8px 6px 10px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.categories-content li > button {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+.categories-content li:hover {
+  color: black;
+  cursor: pointer;
+}
+
+@media only screen and ( max-width : 1400px ) {
+
+  .categories-content {
+    padding: 0;
+    position: absolute;
+  }
+
+}

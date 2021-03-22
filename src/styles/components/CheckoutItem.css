@@ -1,0 +1,19 @@
+.checkout-item-container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.checkout-item-container > img {
+  min-height: 70px;
+  width: 70px;
+}
+
+.checkout-item-container > * {
+  margin: 0 30px;
+}
+
+.checkout-item-container > :nth-child( 2 ) {
+  width: 200px;
+}

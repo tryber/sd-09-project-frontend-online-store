@@ -1,0 +1,22 @@
+.code-bar-container > div {
+  align-items: center;
+  display: flex;
+}
+
+.code-bar-container > div > label {
+  margin-right: 10px;
+}
+
+.credit-card-container > h4 {
+  margin-left: 100px;
+}
+
+.credit-card-container > div {
+  align-items: center;
+  display: flex;
+  margin-left: 100px;
+}
+
+.credit-card-container > div > label {
+  margin-right: 10px;
+}

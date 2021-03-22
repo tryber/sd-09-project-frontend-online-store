@@ -1,0 +1,22 @@
+.cart-icon {
+  background: url('https://image.flaticon.com/icons/png/512/126/126083.png') no-repeat;
+  background-size: contain;
+  border: none;
+  height: 40px;
+  margin-left: 20px;
+  width: 40px;
+}
+
+.cart-icon > span {
+  align-items: center;
+  background-color: #ff671c;
+  border-radius: 100%;
+  color: white;
+  display: flex;
+  font-weight: 700;
+  height: 20px;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 20px;
+}
