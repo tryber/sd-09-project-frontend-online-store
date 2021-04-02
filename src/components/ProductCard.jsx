@@ -8,7 +8,7 @@ class ProductCard extends React.Component {
     const { products, onClick, cartItens } = this.props;
     const isFreeShipping = <span data-testid="free-shipping">Frete Gratis!</span>;
     return (
-      <div>
+      <div className="products-list-container">
         {
           products
             .map(({
@@ -20,10 +20,9 @@ class ProductCard extends React.Component {
               shipping: { free_shipping: freeShipping },
             }) => (
               <div className="product" data-testid="product" key={ id }>
-                <p>{ title }</p>
-                <img src={ thumbnail } alt="produto" />
+                <p className="name-product">{ title }</p>
+                <img className="product-image" src={ thumbnail } alt="produto" />
                 <p>{ price }</p>
-                { (freeShipping) ? isFreeShipping : '' }
                 <button
                   data-testid="product-add-to-cart"
                   type="button"
@@ -40,7 +39,7 @@ class ProductCard extends React.Component {
                 >
                   Ver detalhes
                 </Link>
-
+                { (freeShipping) ? isFreeShipping : '' }
               </div>))
         }
 

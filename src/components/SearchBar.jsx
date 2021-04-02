@@ -8,6 +8,7 @@ class SearchBar extends React.Component {
       <div>
         <input
           type="text"
+          placeholder="Buscar produtos, marcas e muito mais..."
           data-testid="query-input"
           onChange={ onSearchTextChange }
           name="search"

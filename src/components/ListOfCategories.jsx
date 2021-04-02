@@ -7,8 +7,9 @@ class ListOfCategories extends React.Component {
     const { categories, onClickSelectedCategory } = this.props;
     if (categories === 0) return <Loading />;
     return (
-      <div>
-        <p>Categorias:</p>
+      <div
+        className="categories-list-container"
+      >
         {
           categories.map((elem) => (
             <button

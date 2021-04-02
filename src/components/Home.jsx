@@ -4,6 +4,7 @@ import ListOfCategories from './ListOfCategories';
 import SearchBar from './SearchBar';
 import ProductCard from './ProductCard';
 import * as api from '../services/api';
+import '../CSS/Home.css';
 
 class Home extends React.Component {
   constructor(props) {
@@ -87,42 +88,46 @@ class Home extends React.Component {
     const emptySearchMessage = <p>Nenhum produto foi encontrado</p>;
     return (
       <div>
-        <SearchBar
-          onSearchTextChange={ this.handleSearchTextChange }
-          onClickSearch={ this.fetchApiSearch }
-        />
-
-        <p
-          data-testid="home-initial-message"
-        >
-          Digite algum termo de pesquisa ou escolha uma categoria.
-        </p>
-
-        <ListOfCategories
-          categories={ categories }
-          onClickSelectedCategory={ this.fetchByCategoryId }
-        />
-
-        {
-          showMessage ? emptySearchMessage : <ProductCard
-            products={ productsList }
-            onClick={ this.addItemCart }
-            cartItens={ addItem }
+        <header className="header">
+          <h1 className="title-store"> G1 Online Store</h1>
+          <div className="btn-bar">
+            <SearchBar
+              onSearchTextChange={ this.handleSearchTextChange }
+              onClickSearch={ this.fetchApiSearch }
+            />
+            <div
+              className="btn-cart"
+              onClick={
+                <Link
+                  to={ {
+                    pathname: '/shopping-cart',
+                    state: addItem,
+                  } }
+                  data-testid="shopping-cart-button"
+                >
+                  Carrinho
+                </Link>
+              }
+            >
+              <div className="quantity">
+                <span>{ addItem.length }</span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div className="main-content-container">
+          <ListOfCategories
+            categories={ categories }
+            onClickSelectedCategory={ this.fetchByCategoryId }
           />
-        }
-
-        <button type="button">
-          <Link
-            to={ {
-              pathname: '/shopping-cart',
-              state: addItem,
-            } }
-            data-testid="shopping-cart-button"
-          >
-            Carrinho
-            <span data-testid="shopping-cart-size">{ addItem.length }</span>
-          </Link>
-        </button>
+          {
+            showMessage ? emptySearchMessage : <ProductCard
+              products={ productsList }
+              onClick={ this.addItemCart }
+              cartItens={ addItem }
+            />
+          }
+        </div>
       </div>
     );
   }
