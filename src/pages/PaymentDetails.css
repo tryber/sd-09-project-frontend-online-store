@@ -1,0 +1,13 @@
+.cart-review {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cart-review p, img {
+  margin: 1%;
+}
+
+.paymen-method-icon {
+  margin: 0 1%;
+}
