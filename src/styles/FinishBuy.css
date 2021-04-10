@@ -1,0 +1,46 @@
+.link-back {
+  margin: 1px 20px;
+}
+
+.container-products {
+  border: solid 0.5px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  width: 800px;
+}
+
+.container-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 1px;
+}
+
+.div-form {
+  border: solid 0.5px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  width: 800px;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.container-pay {
+  border: solid 0.5px;
+  margin: 20px;
+  padding: 10px;
+  width: 800px;
+}
+
+.btn-buy {
+  font-size: 15px;
+  margin-left: 20px;
+  padding: 10px;
+}

@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  padding: 30px 20px;
+}
+
+.categories {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 25%;
+}
+
+.categoriesBtn {
+  display: block;
+}
+
+.products {
+  margin-left: 20px;
+  text-align: center;
+  width: 75%;
+}
+
+.products img {
+  margin-left: 40px;
+  width: 40px;
+}
+
+.products .search {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  border-radius: 5px;
+  height: 25px;
+  width: 50%;
+}
+
+.link-quantity {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.span-quantity {
+  margin-left: 10px;
+}

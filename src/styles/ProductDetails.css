@@ -1,0 +1,15 @@
+.span-evaluation {
+  margin-left: 20px;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-around;
+  margin: 10px 70% 20px 20px;
+}
+
+.btn-evaluation {
+  width: 100px;
+}

@@ -1,0 +1,47 @@
+.container-item-cart {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 400px 20px 20px;
+}
+
+.container-title-cart {
+  display: flex;
+  margin: 20px;
+}
+
+.container-finish-cart {
+  font-size: 25px;
+  margin: 20px;
+}
+
+.btn-delete {
+  background-color: white;
+  border: none;
+  color: red;
+  font-size: 25px;
+}
+
+.span-qtd {
+  border: solid 0.1px;
+  border-radius: 90px;
+  height: 15px;
+  padding: 5px;
+  text-align: center;
+  width: 15px;
+}
+
+.btn-sinal {
+  background-color: white;
+  border: none;
+  color: blue;
+  font-size: 30px;
+}
+
+.title {
+  margin-left: 20px;
+}
+
+.btn-finish {
+  font-size: 20px;
+}
