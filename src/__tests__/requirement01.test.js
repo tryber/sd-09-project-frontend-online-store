@@ -22,7 +22,7 @@ describe('1 - Implemente o módulo de acesso à api do Mercado Livre', () => {
     const categoryId = 'category1';
     const query = 'my-query';
     const successResponseBody = {};
-
+    
     const mockFetchPromise = Promise.resolve({
       json: () => Promise.resolve(successResponseBody),
     });
