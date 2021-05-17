@@ -4,6 +4,7 @@ import ListOfCategories from './ListOfCategories';
 import SearchBar from './SearchBar';
 import ProductCard from './ProductCard';
 import * as api from '../services/api';
+import * as S from './Styled/S.Home';
 
 class Home extends React.Component {
   constructor(props) {
@@ -86,7 +87,7 @@ class Home extends React.Component {
     const { productsList, showMessage, categories, addItem } = this.state;
     const emptySearchMessage = <p>Nenhum produto foi encontrado</p>;
     return (
-      <div>
+      <S.Div>
         <SearchBar
           onSearchTextChange={ this.handleSearchTextChange }
           onClickSearch={ this.fetchApiSearch }
@@ -111,7 +112,7 @@ class Home extends React.Component {
           />
         }
 
-        <button type="button">
+        <S.Button type="button">
           <Link
             to={ {
               pathname: '/shopping-cart',
@@ -122,8 +123,8 @@ class Home extends React.Component {
             Carrinho
             <span data-testid="shopping-cart-size">{ addItem.length }</span>
           </Link>
-        </button>
-      </div>
+        </S.Button>
+      </S.Div>
     );
   }
 }
