@@ -1,0 +1,334 @@
+a:link, :visited, :hover, :active {
+  color: rgb(78, 128, 130);
+  text-decoration: none;
+}
+
+body {
+  color: rgb(78, 128, 130);
+}
+
+.borderCard {
+  align-items: center;
+  display: flex;
+  flex-basis: 33vh;
+  flex-direction: column;
+}
+
+button {
+  color: rgb(78, 128, 130);
+}
+
+.button {
+  width: 40px;
+}
+
+.card {
+  margin-left: 5px;
+  width: 50px;
+}
+
+.cartHome {
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+}
+
+.cidade {
+  margin-left: 0 5px;
+  width: 200px;
+}
+
+.container {
+  margin: 80px auto 10px;
+  text-align: center;
+  width: 75%;
+}
+
+.msgEvaluation {
+  align-items: center;
+  border: 1px solid cadetblue;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 80%;
+}
+
+.imgProduct {
+  width: 150px;
+}
+
+.inputContent {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 2 1;
+  justify-content: space-between;
+  margin: auto;
+  position: fixed;
+  width: 70%;
+}
+
+.landingPage {
+  display: flex;
+  flex-direction: row;
+}
+
+.listCategories {
+  border: 1px solid rgba(95, 158, 160, 0.5);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  margin: 70px 20px 10px;
+  padding: 0 15px 15px;
+}
+
+.listCategories:hover {
+  box-shadow: 0 0 20px 0 rgba(95, 158, 160, 0.5);
+  transition: 0.5s;
+}
+
+.listCategories > h4 {
+  text-align: center;
+}
+
+.product {
+  align-items: center;
+  border: 1px solid rgba(95, 158, 160, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-basis: 33vh;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px 10px 0;
+}
+
+.product:hover {
+  box-shadow: 0 0 20px 0 rgba(95, 158, 160, 0.5);
+  transition: 0.5s;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 50px auto 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.emptyCart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  position: absolute;
+  width: 100%;
+}
+
+img .start {
+  align-self: initial;
+  display: flex;
+  left: 20px;
+  position: absolute;
+}
+
+.queryButton {
+  border-radius: 25px;
+  line-height: 20px;
+  margin: auto 10px;
+  padding: 3px 10px;
+}
+
+.queryButton:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.queryButton:hover {
+  cursor: pointer;
+}
+
+.queryInput {
+  border-radius: 50px;
+  flex: 1;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 3px 10px;
+}
+
+.queryInput:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.title {
+  background: linear-gradient(rgba(2, 0, 36, 0.8), rgb(9, 9, 90), rgba(0, 90, 255, 0.8));
+  border-bottom: 3px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 15px 5px gray;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 50px;
+  margin-top: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.subtitle {
+  margin-top: 70px;
+}
+
+.fullCart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  position: absolute;
+  width: 100%;
+}
+
+.productDetails {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.contentDetails {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.containerDetails {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.add {
+  width: 80px;
+}
+
+.imgDetails {
+  height: 50vh;
+  width: 50vh;
+}
+
+.evaluation {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.formEvaluation {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checkout {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.form {
+  margin: 20px auto;
+  width: 70%;
+}
+
+.review {
+  text-align: center;
+}
+
+.client {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.buy {
+  line-height: 30px;
+  margin-top: 10px;
+  padding: 1px 10px;
+}
+
+.pay .credCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.label {
+  align-items: center;
+  display: flex;
+}
+
+.div1, .div2, .div3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.name {
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.email {
+  margin: 0 5px;
+}
+
+.cep {
+  margin: 5px 5px 5px 0;
+}
+
+.endereco {
+  flex-grow: 1;
+  margin: 5px 0;
+}
+
+.complemento {
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.numero {
+  width: 70px;
+}
+
+.pay {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.qtd {
+  background-color: cadetblue;
+  border: 1px solid cadetblue;
+  border-radius: 50%;
+  color: white;
+  line-height: 10px;
+  padding: 5px;
+  position: absolute;
+  right: -10px;
+  text-align: center;
+  top: -5px;
+  width: 10px;
+}
